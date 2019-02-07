@@ -11,4 +11,6 @@ else
   # non-interactive
 fi
 ```
-Note that `/dev/stdout` points to `/proc/self/fd/1`, and `/proc/self` points to `/proc/<my pid>`.
+Notes
+- `/dev/stdout` points to `/proc/self/fd/1`, and `/proc/self` points to `/proc/<my pid>`.
+- `PS1` and `-i` checks work from the shell itself, but not from invoked scripts, hence fd checks.
